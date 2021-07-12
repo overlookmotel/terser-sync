@@ -6,9 +6,42 @@
 
 # Execute Terser minify synchronously
 
+## What is this?
+
+A really hacky way of of getting [Terser](https://www.npmjs.com/package/terser) to run synchronously.
+
+`terser.minify()` is async and returns a Promise. The reason for this is that Terser uses uses [source-map](https://www.npmjs.com/package/source-map) (which is implemented in WASM and is async) to parse input source maps. The entire rest of Terser's codebase is synchronous, but this one dependency forces Terser to be async too.
+
+This package calls Terser with a specially crafted options object which tricks Terser into skipping over the async code and into using an older version of source-map (v0.5.7) which is pure JS and is synchronous.
+
+`minifySync()` is born!
+
 ## Usage
 
-This module is under development and not ready for use yet.
+This package is a drop-in replacement for Terser which adds a `minifySync()` method.
+
+```js
+const terser = require('terser-sync');
+
+// Original async terser.minify()
+const {code} = await terser.minify('() => {}');
+
+// Sync version - options are exactly the same
+const {code} = terser.minifySync('() => {}');
+```
+
+### Errors
+
+If Terser throws an error, it's not possible to obtain it synchronously. `minifySync()` will throw an error synchronously and that error has a `.promise` property which will resolve to the error Terser threw.
+
+```js
+try {
+  terser.minifySync( '() => {}', { nonExistentOption: true } );
+} catch (e) {
+  const err = await e.promise;
+  // err.message === '`nonExistentOption` is not a supported option'
+}
+```
 
 ## Versioning
 

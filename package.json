@@ -16,7 +16,12 @@
   "bugs": {
     "url": "https://github.com/overlookmotel/terser-sync/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "has-own-prop": "^2.0.0",
+    "is-it-type": "^5.0.0",
+    "source-map": "^0.5.7",
+    "terser": "^5.7.1"
+  },
   "devDependencies": {
     "@overlookmotel/eslint-config": "^9.0.6",
     "@overlookmotel/eslint-config-jest": "^5.0.1",

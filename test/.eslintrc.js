@@ -12,6 +12,7 @@ module.exports = {
 		'@overlookmotel/eslint-config-jest'
 	],
 	rules: {
-		'import/no-unresolved': ['error', {ignore: ['^terser-sync$']}]
+		'import/no-unresolved': ['error', {ignore: ['^terser-sync$']}],
+		'jest/expect-expect': ['error', {assertFunctionNames: ['expect', 'expectSameResultAsAsync']}]
 	}
 };
