@@ -1,0 +1,46 @@
+{
+  "name": "terser-sync",
+  "version": "0.0.0",
+  "description": "Execute Terser minify synchronously",
+  "main": "index.js",
+  "files": [
+    "lib/**/*.js"
+  ],
+  "author": {
+    "name": "Overlook Motel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overlookmotel/terser-sync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/overlookmotel/terser-sync/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@overlookmotel/eslint-config": "^9.0.6",
+    "@overlookmotel/eslint-config-jest": "^5.0.1",
+    "@overlookmotel/eslint-config-node": "^3.0.1",
+    "eslint": "^7.30.0",
+    "jest": "^27.0.6",
+    "jest-extended": "^0.11.5"
+  },
+  "keywords": [
+    "terser",
+    "minify",
+    "sync"
+  ],
+  "scripts": {
+    "test": "npm run lint && npm run test-main",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "test-main": "jest",
+    "cover": "npm run cover-main && rm -rf coverage",
+    "cover-main": "jest --coverage"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "readmeFilename": "README.md",
+  "license": "MIT"
+}
