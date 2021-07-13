@@ -19,7 +19,7 @@
   "dependencies": {
     "has-own-prop": "^2.0.0",
     "is-it-type": "^5.0.0",
-    "source-map": "^0.5.7",
+    "source-map": "^0.7.3",
     "terser": "^5.7.1"
   },
   "devDependencies": {
