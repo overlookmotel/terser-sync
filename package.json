@@ -23,7 +23,7 @@
     "terser": "^5.7.1"
   },
   "devDependencies": {
-    "@overlookmotel/eslint-config": "^9.0.6",
+    "@overlookmotel/eslint-config": "^9.0.7",
     "@overlookmotel/eslint-config-jest": "^5.0.1",
     "@overlookmotel/eslint-config-node": "^3.0.1",
     "eslint": "^7.30.0",
