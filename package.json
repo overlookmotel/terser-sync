@@ -1,6 +1,6 @@
 {
   "name": "terser-sync",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Execute Terser minify synchronously",
   "main": "index.js",
   "files": [
