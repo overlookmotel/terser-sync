@@ -20,7 +20,7 @@
     "has-own-prop": "^2.0.0",
     "is-it-type": "^5.0.0",
     "source-map": "^0.5.7",
-    "terser": "^5.7.2"
+    "terser": "^5.12.0"
   },
   "devDependencies": {
     "@overlookmotel/eslint-config": "^9.0.7",
